@@ -20,6 +20,8 @@ This text is not an announcement of results. It is an inventory of what the fiel
 
 I read them. Not just the abstracts, the limitation sections/the appendices/the constants. That is where the truth of a piece of research lives, and apparently it needs saying, because several of them are routinely cited for things they do not contain...
 
+I was looking for one precise thing: an internal state that persists, measured on real time. I picked the 6 best, and here is where each one stops.
+
 **Springdrift** (arXiv:2604.04660). The closest, and the best: a persistent agent runtime, a 5 dimensional affect computed without calling the model, injected into the prompt every cycle, alive outside conversation thanks to a real scheduler.
 
 Though I do respect this design. Look at the implementation up close: of the 5 dimensions only one, "calm", carries real state inertia (an exponential moving average, α = 0.15, with a target at 85%); the other 4 are recomputed every cycle from telemetry. One persistent dimension out of five. And section 9 says the rest: "We have not conducted ablation studies", evidence that is "anecdotal", "a single instance with a single operator", 23 days. The best, by its own admission, is just an anecdote...
