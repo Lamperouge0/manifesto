@@ -18,6 +18,8 @@ Ce texte n'est pas une annonce de résultats. C'est un constat de ce qui manque 
 
 Je les ai lus. Pas juste les abstracts, les sections limites/les appendices/les constantes. C'est là que l'on trouve la vérité d'une recherche, et il faut croire que ça mérite d'être précisé, parce que plusieurs sont régulièrement cités pour des choses qu'ils ne contiennent pas...
 
+Je recherchais une chose précise: un état interne qui persiste, mesuré sur du temps réel. J'ai choisi les 6 meilleurs, et voici oû chacun s'arrête.
+
 **Springdrift** (arXiv:2604.04660). Le plus proche, et le meilleur: un runtime d'agent persistant, un affect à 5 dimensions calculé sans appel au modèle, injecté dans le prompt à chaque cycle, vivant hors conversation grâce à un vrai ordonnanceur.
 
 Bien que je respecte ce design. Regardez l'implémentation de près : sur les 5 dimensions une seule, "calm", porte une inertie d'état réelle (une moyenne mobile exponentielle, α = 0,15, avec une cible à 85 %); les 4 autres sont recalculées à chaque cycle depuis la télémétrie. Une dimension persistante sur cinq. Et la section 9 dit le reste: "We have not conducted ablation studies", des preuves "anecdotal", "a single instance with a single operator", 23 jours. Le meilleur, de son propre aveu, est juste une anecdote...
